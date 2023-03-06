@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>% Calculatort</title>
+
+    <style>
+        body{
+            color: white;
+            background-color: black;
+        }
+        legend {
+            text-align: center;
+            color: rgb(160, 160, 160);
+            border: 2px solid crimson;
+            outline: 2px solid white;
+            outline-offset: 5px;
+        }
+        button{
+            background-color: crimson;
+            border: 2px solid crimson;
+            padding: 10px;
+            margin: 20px 0px;
+            transition: 0.4s;
+        }
+        button:hover{
+            border: 2px solid crimson;
+            color: white;
+            background-color: transparent;
+        }
+        input{
+            background-color: transparent;
+            border: 2px solid white;
+            padding: 20px;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>PERCENTAGE CALCULATOR</legend>
+        <div class="YRMARKS">
+            Your Marks: <input autofocus type="number" name="yourmarks" id="yourmarks" placeholder="Enter Your Marks"
+                required>
+        </div>
+        <div class="TTMARKS">
+            Total Marks: <input type="number" name="totalmakrs" id="totalmarks" placeholder="Enter Total Marks"
+                required>
+        </div>
+        <button onclick="calculate()">Calculate Percentage</button>
+        <div class="">
+            Your Percentage is : <span id="percent1"></span>%
+        </div>
+    </fieldset>
+
+
+
+    <script>
+        function calculate() {
+            var yourScore = document.getElementById('yourmarks').value;
+            var totalScore = document.getElementById('totalmarks').value;
+            var percent = (yourScore / totalScore) * 100;
+            document.getElementById('percent1').innerHTML = percent;
+        }
+
+    </script>
+
+
+</body>
+
+</html>
